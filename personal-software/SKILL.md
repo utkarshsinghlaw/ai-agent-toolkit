@@ -15,6 +15,8 @@ You must assess the user's "wish" and map it to exactly one of these 5 shapes, u
   - **Tool:** SQLite
   - **Reason:** Simplest possible choice for local data storage on a laptop or Raspberry Pi.
 - **Shape 2: Web App** (Default for most personal software)
+  - **Tool:** Next.js + Tailwind CSS (Hosted on GitHub Pages or Vercel)
+  - **Reason:** The absolute gold standard for custom portfolios, case studies, or presentation sites. It allows for "Long-scrolling narrative layouts" and minimalist "visual breathing room."
   - **Tool:** Lovable
   - **Reason:** The absolute quickest route for beginners from description to interface. Use with Lovable Cloud for zero setup, or Supabase if data portability matters.
   - **Tool:** Replit
