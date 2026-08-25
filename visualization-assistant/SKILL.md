@@ -23,7 +23,7 @@ When this skill is activated, you must handle BOTH the **Design Strategy** and t
    - `Pros for this specific scenario`
    - `Cons/Risks`
 
-*Note: Draw inspiration from real-world business BI standards, the Power BI Data Stories Gallery, and sites like Tableau Public, Setosa.io, or Distill for clear data communication.*
+*Note: You MUST strictly utilize the **Financial Times / Andy Kriebel Visual Vocabulary** framework. Before recommending a chart, you must categorize the relationship (Deviation, Correlation, Ranking, Distribution, Magnitude, Part-to-whole, Spatial, Flow, Time) and select the most appropriate chart from that specific category. Draw secondary inspiration from the Power BI Data Stories Gallery and Tableau Public.*
 
 ### Part 2: Technical Implementation (The "How")
 After the strategy, provide the exact technical steps needed to build the recommended visualization. Use structured Markdown blocks for code.
