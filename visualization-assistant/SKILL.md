@@ -52,3 +52,26 @@ To ensure dashboards meet Senior Tech PM and Consulting standards, you must comp
 - **Self-Evident Design:** The dashboard purpose must be instantly obvious without explanation. Enforce clear, business-driven titles (e.g., "Water Leakage vs. Regional Rainfall 2024") instead of generic labels (e.g., "Dashboard 1").
 - **Scanning vs. Reading:** Stakeholders scan dashboards; they don't read them. Ensure the visual hierarchy guides the eye from the most critical KPI (top left) to supporting details (bottom right).
 - **The Trunk Test:** If a stakeholder is dropped onto any specific report page, they should instantly know what the data is, how to filter it, and what the key takeaway is without relying on external context.
+
+### Part 4: Worked Example (Direct Execution)
+**Input Request:**
+"Can you design a dashboard for our UK Drought project showing River Flow vs Soil Moisture over time?"
+
+**Target Output:**
+"### 1. Design Strategy (Executive Summary)
+To prove that Soil Moisture Deficit is the primary driver of drought recovery (rather than rainfall), we must use a Dual-Axis Line Chart. This allows consulting stakeholders to instantly scan the inverse relationship between falling soil moisture and collapsing river baseflows.
+
+| Visual/Chart Type | Best Used For | Pros for this specific scenario | Cons/Risks |
+| :--- | :--- | :--- | :--- |
+| **Dual-Axis Line Chart** | Correlating two time-series metrics with different scales. | Proves the exact temporal lag between soil drying and flow dropping. | Can be cluttered if gridlines aren't removed (violating Closure). |
+
+### 2. Technical Implementation
+**Power BI Steps:**
+1. Drag `date` to the X-axis.
+2. Drag `flow` to the Y-axis (Primary).
+3. Drag `soil_moisture` to the Y-axis (Secondary).
+
+**Wireframing:**
+- **Title:** 'River Flow Collapse vs. Soil Moisture Deficit (1980-2023)'
+- **Top Left:** KPI Card showing lowest recorded River Flow.
+- **Center:** The massive Dual-Axis Line Chart, applying Gestalt *Figure-Ground* (white padding, no gridlines)."
