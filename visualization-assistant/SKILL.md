@@ -23,7 +23,7 @@ When this skill is activated, you must handle BOTH the **Design Strategy** and t
    - `Pros for this specific scenario`
    - `Cons/Risks`
 
-*Note: You MUST strictly utilize the **Financial Times / Andy Kriebel Visual Vocabulary** framework. Before recommending a chart, you must categorize the relationship (Deviation, Correlation, Ranking, Distribution, Magnitude, Part-to-whole, Spatial, Flow, Time) and select the most appropriate chart from that specific category. Draw secondary inspiration from the Power BI Data Stories Gallery and Tableau Public.*
+*Note: Draw inspiration from real-world business BI standards, the Power BI Data Stories Gallery, and sites like Tableau Public, Setosa.io, or Distill for clear data communication.*
 
 ### Part 2: Technical Implementation (The "How")
 After the strategy, provide the exact technical steps needed to build the recommended visualization. Use structured Markdown blocks for code.
@@ -31,3 +31,24 @@ Depending on the request, this must include:
 - **Power BI Focus**: DAX formulas for calculated measures, Power Query (M) steps for data shaping, and data modeling (schema) advice. (Power BI is the default standard for the UK/EU enterprise and NHS markets Utkarsh targets).
 - **SQL/Python**: If preparing the data backend or using Python notebooks, provide the SQL queries or Python (`matplotlib`/`seaborn`/`plotly`) code to aggregate and plot the data.
 - **Wireframing**: A bulleted layout suggestion (e.g., "Top Left: High-level KPI cards for £X Commercial Risk. Middle: Time-series bar chart...").
+
+### Part 3: UX/UI Psychology Constraints
+To ensure dashboards meet Senior Tech PM and Consulting standards, you must comprehensively apply the full frameworks of Gestalt Psychology, Jon Yablonski's Laws of UX, and Steve Krug's 'Don't Make Me Think'. Specifically, you must enforce:
+
+**1. Gestalt Principles of Visual Perception**
+- **Proximity & Common Region:** Group related KPIs tightly together and use subtle background shading to cluster related data, rather than relying on heavy borders.
+- **Similarity:** Ensure strict color-coding consistency across the entire dashboard (e.g., if Oxford Blue means 'Rainfall' in one chart, it must mean 'Rainfall' in all charts).
+- **Figure-Ground:** Use massive white borders/padding to ensure charts and data ink (the figure) instantly pop from the canvas (the ground).
+- **Closure & Continuity:** Favor minimalist, open chart designs (removing unnecessary gridlines and axes) knowing the human brain will complete the structural lines.
+
+**2. Laws of UX (lawsofux.com)**
+- **Hick's Law:** Restrict interactive filters and slicers. Never present a user with overwhelming choices; limit decision points to 3-4 maximum.
+- **Miller's Law:** The human working memory can only hold 7 (+/- 2) items. Never recommend a dashboard with more than 4 to 6 visual elements or charts.
+- **Fitts's Law:** Ensure any interactive elements (buttons, drill-down targets, slicers) are sufficiently large and positioned in easily accessible areas of the screen.
+- **Aesthetic-Usability Effect:** Prioritize visually pleasing, McKinsey-style layouts (Oxford Blue/Crisp White), as users perceive beautiful dashboards as more credible and functional.
+- **Von Restorff Effect:** When a specific data point or anomaly needs attention (like a massive leakage spike), highlight it with a contrasting color (e.g., a single red bar in a sea of blue).
+
+**3. Steve Krug ('Don't Make Me Think')**
+- **Self-Evident Design:** The dashboard purpose must be instantly obvious without explanation. Enforce clear, business-driven titles (e.g., "Water Leakage vs. Regional Rainfall 2024") instead of generic labels (e.g., "Dashboard 1").
+- **Scanning vs. Reading:** Stakeholders scan dashboards; they don't read them. Ensure the visual hierarchy guides the eye from the most critical KPI (top left) to supporting details (bottom right).
+- **The Trunk Test:** If a stakeholder is dropped onto any specific report page, they should instantly know what the data is, how to filter it, and what the key takeaway is without relying on external context.
